@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Update Employee</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <button class="sidebar-toggle" type="button" aria-controls="dashboard-sidebar" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true">☰</span>
+        <span>Menu</span>
+    </button>
+
+    <aside class="sidebar" id="dashboard-sidebar">
+
+        <button class="sidebar-close" type="button" aria-label="Close menu">×</button>
+
+        <h2>EMS</h2>
+
+        <p>Employee System</p>
+
+        <a href="/dashboard">Dashboard</a>
+
+        <a href="/add-employee">
+            Add Employee
+        </a>
+
+        <a href="/employees">
+            View Employees
+        </a>
+
+        <form method="POST" action="/logout">
+
+            <button class="logout-btn">
+                Logout
+            </button>
+
+        </form>
+
+    </aside>
+
+
+    <main class="main-content dashboard-main">
+
+        <div class="form-card">
+
+            <h1>Update Employee</h1>
+
+            <form method="POST" action="/update">
+
+                <input
+                    type="hidden"
+                    name="id"
+                    value="{{id}}"
+                >
+
+
+                <label>Name</label>
+
+                <input
+                    type="text"
+                    name="name"
+                    value="{{name}}"
+                    required
+                >
+
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    name="email"
+                    value="{{email}}"
+                    required
+                >
+
+
+                <label>Phone</label>
+
+                <input
+                    type="text"
+                    name="phone"
+                    value="{{phone}}"
+                    required
+                >
+
+
+                <label>Position</label>
+
+                <input
+                    type="text"
+                    name="position"
+                    value="{{position}}"
+                    required
+                >
+
+
+                <label>Department</label>
+
+                <input
+                    type="text"
+                    name="department"
+                    value="{{department}}"
+                    required
+                >
+
+
+                <label>Salary</label>
+
+                <input
+                    type="number"
+                    name="salary"
+                    value="{{salary}}"
+                    required
+                >
+
+
+                <button type="submit">
+                    Update Employee
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>

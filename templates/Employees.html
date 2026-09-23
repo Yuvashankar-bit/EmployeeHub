@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Employees</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <button class="sidebar-toggle" type="button" aria-controls="dashboard-sidebar" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true">☰</span>
+        <span>Menu</span>
+    </button>
+
+    <aside class="sidebar" id="dashboard-sidebar">
+
+        <button class="sidebar-close" type="button" aria-label="Close menu">×</button>
+
+        <h2>EMS</h2>
+
+        <p>Employee System</p>
+
+        <a href="/dashboard">Dashboard</a>
+
+        <a href="/add-employee">
+            Add Employee
+        </a>
+
+        <a href="/employees">
+            View Employees
+        </a>
+
+        <form method="POST" action="/logout">
+
+            <button class="logout-btn">
+                Logout
+            </button>
+
+        </form>
+
+    </aside>
+
+
+    <main class="main-content dashboard-main">
+
+        <h1>Employee List</h1>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {{employee_rows}}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
